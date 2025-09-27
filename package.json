@@ -1,0 +1,37 @@
+{
+  "name": "curamus-site",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --check .",
+    "format:write": "prettier --write ."
+  },
+  "dependencies": {
+    "@types/leaflet": "^1.9.20",
+    "framer-motion": "^12.23.22",
+    "leaflet": "^1.9.4",
+    "next": "^14.2.4",
+    "nodemailer": "^6.9.11",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-leaflet": "^4.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "@types/nodemailer": "^7.0.1",
+    "@types/react": "^18.2.72",
+    "@types/react-dom": "^18.2.23",
+    "autoprefixer": "^10.4.18",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.2.4",
+    "eslint-config-prettier": "^9.1.0",
+    "postcss": "^8.4.35",
+    "prettier": "^3.2.5",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.4.5"
+  }
+}
