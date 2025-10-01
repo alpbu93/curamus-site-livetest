@@ -39,8 +39,8 @@ export default function DatenschutzPage() {
             </p>
             <p>
               Datenschutz:{' '}
-              <a className="text-primary-700 hover:underline" href="mailto:datenschutz@curamus-facility.de">
-                datenschutz@curamus-facility.de
+              <a className="text-primary-700 hover:underline" href="mailto:info@curamus-facility.de">
+                info@curamus-facility.de
               </a>
             </p>
             <p>Registergericht: Amtsgericht Potsdam – HRB 40967 P</p>

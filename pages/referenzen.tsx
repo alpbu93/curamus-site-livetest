@@ -124,7 +124,7 @@ export default function ReferenzenPage() {
         </motion.header>
 
         <motion.section
-          className="grid gap-6 md:grid-cols-3"
+          className="mx-auto flex w-full max-w-[1180px] flex-wrap items-stretch justify-center gap-6 md:gap-8"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-80px' }}
@@ -139,22 +139,24 @@ export default function ReferenzenPage() {
             <motion.article
               key={item.title}
               variants={fade}
-              className="rounded-3xl border border-white/20 bg-surface-elevated/85 p-6 shadow-soft"
-            >
-              <div className="mb-4 flex items-center justify-center">
-                <Image
-                  src={item.image}
-                  alt={item.imageAlt}
-                  width={80}
-                  height={80}
-                  className="h-16 w-16 object-contain"
-                />
-              </div>
-              <h2 className="text-lg font-semibold text-ink">{item.title}</h2>
-              <p className="mt-3 text-sm text-ink-muted">{item.description}</p>
-            </motion.article>
-          ))}
-        </motion.section>
+              className="flex w-full flex-col rounded-3xl border border-white/20 bg-surface-elevated/85 p-6 shadow-soft md:flex-[1_1_320px] md:max-w-[360px]"
+              >
+                <div className="mb-4 flex items-center justify-center">
+                  <Image
+                    src={item.image}
+                    alt={item.imageAlt}
+                    width={80}
+                    height={80}
+                    className="h-16 w-16 object-contain"
+                  />
+                </div>
+                <div className="flex flex-1 flex-col">
+                  <h2 className="text-lg font-semibold text-ink">{item.title}</h2>
+                  <p className="mt-3 text-sm text-ink-muted">{item.description}</p>
+                </div>
+              </motion.article>
+            ))}
+          </motion.section>
 
         <motion.section
           className="space-y-8"
@@ -171,12 +173,12 @@ export default function ReferenzenPage() {
           <motion.h2 className="text-2xl font-semibold text-ink" variants={fade}>
             Kompetenzfelder
           </motion.h2>
-          <motion.div className="grid gap-6 md:grid-cols-3">
+          <motion.div className="mx-auto flex w-full max-w-[1180px] flex-wrap items-stretch justify-center gap-6 md:gap-8">
             {competencies.map((item) => (
               <motion.article
                 key={item.title}
                 variants={fade}
-                className="rounded-3xl border border-white/20 bg-surface-elevated/85 p-6 shadow-soft"
+                className="flex w-full flex-col rounded-3xl border border-white/20 bg-surface-elevated/85 p-6 shadow-soft md:flex-[1_1_320px] md:max-w-[360px]"
               >
                 <div className="relative mb-4 aspect-[4/3] overflow-hidden rounded-2xl bg-primary-50/40">
                   <Image
@@ -188,8 +190,10 @@ export default function ReferenzenPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-tr from-primary-600/15 via-transparent to-transparent" aria-hidden="true" />
                 </div>
-                <h3 className="text-lg font-semibold text-ink">{item.title}</h3>
-                <p className="mt-3 text-sm text-ink-muted">{item.description}</p>
+                <div className="flex flex-1 flex-col">
+                  <h3 className="text-lg font-semibold text-ink">{item.title}</h3>
+                  <p className="mt-3 text-sm text-ink-muted">{item.description}</p>
+                </div>
               </motion.article>
             ))}
           </motion.div>
@@ -210,12 +214,12 @@ export default function ReferenzenPage() {
           <motion.h2 className="text-2xl font-semibold text-ink" variants={fade}>
             Ausgewählte Objekte
           </motion.h2>
-          <motion.div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <motion.div className="mx-auto flex w-full max-w-[1180px] flex-wrap items-stretch justify-center gap-6 md:gap-8">
             {projects.map((project) => (
               <motion.article
                 key={project.title}
                 variants={fade}
-                className="flex flex-col overflow-hidden rounded-3xl border border-white/20 bg-surface-elevated/85 shadow-soft"
+                className="flex w-full flex-col overflow-hidden rounded-3xl border border-white/20 bg-surface-elevated/85 shadow-soft md:flex-[1_1_360px] md:max-w-[360px]"
               >
                 <div className="relative aspect-[4/3] overflow-hidden bg-primary-50/40">
                   <Image
@@ -227,7 +231,7 @@ export default function ReferenzenPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ink/35 via-transparent to-transparent" aria-hidden="true" />
                 </div>
-                <div className="space-y-3 p-6">
+                <div className="flex flex-1 flex-col space-y-3 p-6">
                   <h3 className="text-lg font-semibold text-ink">{project.title}</h3>
                   <p className="text-sm text-ink-muted">{project.description}</p>
                 </div>

@@ -26,18 +26,25 @@ const categories = [
     imageAlt: 'Techniker prüft Messwerte an einer Gebäudeleittechnik',
   },
   {
-    title: 'Sicherheitsdienste',
+    title: 'Sicherheitsdienste in Kooperation',
     description:
-      'Sicherheit ist Vertrauen. Unsere Mitarbeiter übernehmen Objektschutz, Zugangskontrollen und Schließdienste – diskret und zuverlässig.',
+      'Sicherheit ist Vertrauen. Gemeinsam mit qualifizierten Partnern organisieren wir Objektschutz, Zugangskontrollen und Schließdienste – diskret und zuverlässig.',
     image: '/images/services/service-security-lobby.png',
-    imageAlt: 'Sicherheitskraft überwacht Lobby-Monitore',
+    imageAlt: 'Sicherheitskraft eines Partnerunternehmens überwacht Lobby-Monitore',
   },
   {
-    title: 'Grünanlagenpflege & Winterdienst',
+    title: 'Grünanlagenpflege',
     description:
-      'Wir sorgen im Sommer für gepflegte Außenflächen und übernehmen im Winter Schneeräumung sowie Streudienste für sichere Wege.',
+      'Pflege von Grünflächen, Beeten und Außenanlagen – vom Rasenschnitt über Strauchpflege bis zur Bewässerungskoordination.',
+    image: '/images/services/service-gruenpflege.png',
+    imageAlt: 'Gärtnerteam pflegt eine Grünanlage vor einem modernen Bürogebäude',
+  },
+  {
+    title: 'Winterdienst',
+    description:
+      'Räum- und Streudienste für Wege, Zufahrten und Parkflächen – inklusive Bereitschaftsdienst und Dokumentation gesetzlicher Vorgaben.',
     image: '/images/services/service-outdoor-care.png',
-    imageAlt: 'Gartenpflegeteam trimmt Sträucher vor einem Bürogebäude',
+    imageAlt: 'Serviceteam räumt leichten Schnee auf einem Unternehmensgelände',
   },
   {
     title: 'Entsorgungsmanagement',
@@ -57,13 +64,15 @@ export default function DienstleistungenPage() {
   return (
     <Layout
       title="Dienstleistungen | Curamus"
-      description="Facility-Services von Curamus: Reinigung, Technik, Sicherheit, Grünpflege und nachhaltige Entsorgung."
+      description="Facility-Services von Curamus: Reinigung, Technik, Sicherheitsleistungen in Kooperation, Grünanlagenpflege, Winterdienst und nachhaltige Entsorgung."
       keywords={[
         'Dienstleistungen Facility Management',
         'Gebäudereinigung Berlin',
         'Hausmeisterservice Brandenburg',
         'Technisches Gebäudemanagement',
-        'Sicherheitsdienste Facility',
+        'Sicherheitsdienste in Kooperation',
+        'Grünanlagenpflege',
+        'Winterdienst',
       ]}
     >
       <div className="space-y-20">
@@ -84,7 +93,7 @@ export default function DienstleistungenPage() {
         </motion.header>
 
         <motion.section
-          className="grid gap-8 md:grid-cols-2"
+          className="mx-auto flex w-full max-w-[1180px] flex-wrap items-stretch justify-center gap-8 md:gap-10"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-80px' }}
@@ -99,7 +108,7 @@ export default function DienstleistungenPage() {
             <motion.article
               key={category.title}
               variants={reveal}
-              className="group overflow-hidden rounded-3xl border border-white/20 bg-surface-elevated/85 p-8 shadow-soft transition hover:-translate-y-1 hover:shadow-glow"
+              className="group flex w-full flex-col overflow-hidden rounded-3xl border border-white/20 bg-surface-elevated/85 p-8 shadow-soft transition hover:-translate-y-1 hover:shadow-glow md:flex-[1_1_360px] md:max-w-[360px]"
             >
               <div className="relative mb-5 aspect-[4/3] overflow-hidden rounded-2xl bg-primary-50/30">
                 <Image
@@ -111,14 +120,16 @@ export default function DienstleistungenPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary-600/15 via-transparent to-transparent" aria-hidden="true" />
               </div>
-              <h2 className="text-xl font-semibold text-ink">{category.title}</h2>
-              <p className="mt-3 text-sm text-ink-muted">{category.description}</p>
-              <Link
-                href="/kontakt"
-                className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-primary-700 opacity-0 transition group-hover:opacity-100"
-              >
-                Beratungsgespräch vereinbaren <span aria-hidden="true">→</span>
-              </Link>
+              <div className="flex flex-1 flex-col">
+                <h2 className="text-xl font-semibold text-ink">{category.title}</h2>
+                <p className="mt-3 text-sm text-ink-muted">{category.description}</p>
+                <Link
+                  href="/kontakt"
+                  className="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-medium text-primary-700 opacity-0 transition group-hover:opacity-100"
+                >
+                  Beratungsgespräch vereinbaren <span aria-hidden="true">→</span>
+                </Link>
+              </div>
             </motion.article>
           ))}
         </motion.section>

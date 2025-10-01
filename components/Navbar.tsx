@@ -9,6 +9,7 @@ const navItems = [
   { href: '/ueber-uns', label: 'Über uns' },
   { href: '/dienstleistungen', label: 'Dienstleistungen' },
   { href: '/referenzen', label: 'Referenzen' },
+  { href: '/karriere', label: 'Karriere' },
   { href: '/standort', label: 'Standort' },
   { href: '/impressum', label: 'Impressum' },
   { href: '/datenschutz', label: 'Datenschutz' },

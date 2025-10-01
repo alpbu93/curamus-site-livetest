@@ -34,7 +34,7 @@ export default function ImpressumPage() {
 
         <section className="space-y-2">
           <h3 className="text-base font-semibold text-slate-900">Vertreten durch</h3>
-          <p>Marco Suckel (Geschäftsführer), einzelvertretungsberechtigt</p>
+          <p>Marco Suckel (Geschäftsführer)</p>
         </section>
 
         <section className="space-y-2">
@@ -64,9 +64,7 @@ export default function ImpressumPage() {
           <h3 className="text-base font-semibold text-slate-900">Umsatzsteuer-ID</h3>
           <p>
             Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:{' '}
-            <span className="italic">
-              Wird nach Beantragung beim Bundeszentralamt für Steuern ergänzt.
-            </span>
+            <span className="font-medium">DE456597834</span>
           </p>
         </section>
 

@@ -1,12 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import nodemailer from 'nodemailer'
 
-const fallbackRecipient = 'info@curamus-facility.de'
+const fallbackRecipient = 'burak.alp@web.de'
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 type ContactPayload = {
   name: string
   email: string
+  reason: string
   message: string
 }
 
@@ -28,7 +29,7 @@ const escapeHtml = (value: string) =>
     }
   })
 
-async function sendEmail({ name, email, message }: ContactPayload) {
+async function sendEmail({ name, email, reason, message }: ContactPayload) {
   if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASSWORD) {
     console.warn('SMTP is not configured. Skipping email delivery.', {
       name,
@@ -51,6 +52,7 @@ async function sendEmail({ name, email, message }: ContactPayload) {
   const escapedName = escapeHtml(name)
   const escapedEmail = escapeHtml(email)
   const emailHref = `mailto:${encodeURIComponent(email)}`
+  const escapedReason = escapeHtml(reason)
   const formattedMessage = escapeHtml(message).replace(/\n/g, '<br />')
 
   await transporter.sendMail({
@@ -58,10 +60,11 @@ async function sendEmail({ name, email, message }: ContactPayload) {
     to: recipient,
     replyTo: email,
     subject: `Neue Kontaktanfrage von ${name}`,
-    text: [`Name: ${name}`, `E-Mail: ${email}`, '', 'Nachricht:', message].join('\n'),
+    text: [`Name: ${name}`, `E-Mail: ${email}`, `Grund: ${reason}`, '', 'Nachricht:', message].join('\n'),
     html: `
       <p><strong>Name:</strong> ${escapedName}</p>
       <p><strong>E-Mail:</strong> <a href="${emailHref}">${escapedEmail}</a></p>
+      <p><strong>Grund:</strong> ${escapedReason}</p>
       <p><strong>Nachricht:</strong></p>
       <p>${formattedMessage}</p>
     `,
@@ -76,9 +79,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const name = typeof req.body?.name === 'string' ? req.body.name.trim() : ''
   const email = typeof req.body?.email === 'string' ? req.body.email.trim() : ''
+  const reason = typeof req.body?.reason === 'string' ? req.body.reason.trim() : ''
   const message = typeof req.body?.message === 'string' ? req.body.message.trim() : ''
 
-  if (!name || !email || !message) {
+  if (!name || !email || !reason || !message) {
     return res.status(400).json({ error: 'Bitte füllen Sie alle Pflichtfelder aus.' })
   }
 
@@ -87,7 +91,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   try {
-    await sendEmail({ name, email, message })
+    await sendEmail({ name, email, reason, message })
     return res.status(200).json({ success: true })
   } catch (error) {
     console.error('Fehler beim Versenden der Kontaktanfrage', error)

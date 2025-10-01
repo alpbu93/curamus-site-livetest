@@ -17,16 +17,23 @@ export function Footer() {
         </div>
         <div className="space-y-3">
           <p className="text-sm font-semibold uppercase tracking-wider text-white/60">Kontakt</p>
-          <p className="text-sm text-white/70">
-            <a className="transition hover:text-white" href="tel:+4930123456789">
-              +49 (0)30 123 456 789
-            </a>
-          </p>
-          <p className="text-sm text-white/70">
-            <a className="transition hover:text-white" href="mailto:info@curamus-facility.de">
-              info@curamus-facility.de
-            </a>
-          </p>
+          <div className="space-y-1 text-sm text-white/70">
+            <p>
+              <a className="transition hover:text-white" href="tel:+4933772040071">
+                +49 (0)3377 2040071
+              </a>
+            </p>
+            <p>
+              <a className="transition hover:text-white" href="mailto:info@curamus-facility.de">
+                info@curamus-facility.de
+              </a>
+            </p>
+            <p>
+              <a className="transition hover:text-white" href="mailto:kontakt@curamus-facility.de">
+                kontakt@curamus-facility.de (Bewerbungen)
+              </a>
+            </p>
+          </div>
         </div>
         <div className="space-y-3">
           <p className="text-sm font-semibold uppercase tracking-wider text-white/60">
@@ -37,6 +44,7 @@ export function Footer() {
               { href: '/', label: 'Startseite' },
               { href: '/dienstleistungen', label: 'Dienstleistungen' },
               { href: '/referenzen', label: 'Referenzen' },
+              { href: '/karriere', label: 'Karriere' },
               { href: '/standort', label: 'Standort' },
             ].map((item) => (
               <li key={item.href}>

@@ -1,11 +1,13 @@
 import { ChangeEvent, FormEvent, useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import Layout from '@/components/Layout'
 
 interface FormState {
   name: string
   email: string
+  reason: string
   message: string
 }
 
@@ -14,6 +16,7 @@ type FormErrors = Partial<Record<keyof FormState, string>>
 const initialState: FormState = {
   name: '',
   email: '',
+  reason: '',
   message: '',
 }
 
@@ -36,6 +39,10 @@ export default function KontaktPage() {
       validationErrors.email = 'Bitte geben Sie Ihre E-Mail-Adresse an.'
     } else if (!emailPattern.test(values.email.trim())) {
       validationErrors.email = 'Bitte geben Sie eine gültige E-Mail-Adresse an.'
+    }
+
+    if (!values.reason.trim()) {
+      validationErrors.reason = 'Bitte wählen Sie den Grund Ihrer Anfrage aus.'
     }
 
     if (!values.message.trim()) {
@@ -93,6 +100,7 @@ export default function KontaktPage() {
       const payload = {
         name: form.name.trim(),
         email: form.email.trim(),
+        reason: form.reason.trim(),
         message: form.message.trim(),
       }
 
@@ -141,7 +149,7 @@ export default function KontaktPage() {
           </h1>
           <p className="text-base text-slate-600">
             Haben Sie Fragen oder möchten ein Angebot einholen? Schreiben Sie uns oder greifen Sie
-            zum Telefon – wir melden uns innerhalb eines Werktages zurück.
+            zum Telefon – wir melden uns schnellstmöglich innerhalb von wenigen Werktagen zurück.
           </p>
         </header>
 
@@ -185,6 +193,15 @@ export default function KontaktPage() {
                   info@curamus-facility.de
                 </a>
               </p>
+              <p className="mt-2">
+                Bewerbungen:{' '}
+                <a
+                  className="font-medium text-primary-700 hover:underline"
+                  href="mailto:kontakt@curamus-facility.de"
+                >
+                  kontakt@curamus-facility.de
+                </a>
+              </p>
               <p className="mt-6 text-xs text-slate-500">
                 Wir sind Montag bis Freitag von 8 bis 18 Uhr erreichbar. In dringenden Fällen stehen
                 separate Bereitschaftsnummern zur Verfügung.
@@ -192,7 +209,9 @@ export default function KontaktPage() {
             </div>
             <div className="rounded-3xl border border-primary-100 bg-white p-6 shadow-sm">
               <h2 className="text-lg font-semibold text-slate-900">Standort</h2>
-              <p className="mt-3">Beispielstraße 12, 10115 Berlin</p>
+              <p className="mt-3">CURAMUS Facility Services GmbH</p>
+              <p>Saalower Straße 6a</p>
+              <p>15806 Zossen</p>
               <p className="mt-1">Berlin & Brandenburg</p>
               <p className="mt-3 text-xs text-slate-500">
                 Termine vor Ort nach Vereinbarung. Wir freuen uns auf Ihre Anfrage.
@@ -254,6 +273,34 @@ export default function KontaktPage() {
             </label>
 
             <label className="flex flex-col gap-2 text-sm font-medium text-slate-700">
+              Grund der Anfrage
+              <select
+                aria-invalid={Boolean(errors.reason)}
+                aria-describedby={errors.reason ? 'contact-reason-error' : undefined}
+                value={form.reason}
+                onChange={handleFieldChange('reason')}
+                className="rounded-xl border border-primary-100 px-4 py-3 text-sm text-slate-900 shadow-sm focus:border-primary-400 focus:outline-none focus:ring-2 focus:ring-primary-200"
+              >
+                <option value="">Bitte auswählen</option>
+                <option value="Allgemeine Anfrage">Allgemeine Anfrage</option>
+                <option value="Angebot anfordern">Angebot anfordern</option>
+                <option value="Gebäudereinigung">Gebäudereinigung</option>
+                <option value="Hausmeisterdienste">Hausmeisterdienste</option>
+                <option value="Technisches Gebäudemanagement">Technisches Gebäudemanagement</option>
+                <option value="Sicherheitsdienste in Kooperation">Sicherheitsdienste in Kooperation</option>
+                <option value="Grünanlagenpflege">Grünanlagenpflege</option>
+                <option value="Winterdienst">Winterdienst</option>
+                <option value="Entsorgungsmanagement">Entsorgungsmanagement</option>
+                <option value="Bewerbung / Karriere">Bewerbung / Karriere</option>
+              </select>
+              {errors.reason && (
+                <p id="contact-reason-error" className="text-xs text-red-600">
+                  {errors.reason}
+                </p>
+              )}
+            </label>
+
+            <label className="flex flex-col gap-2 text-sm font-medium text-slate-700">
               Ihre Nachricht
               <textarea
                 aria-invalid={Boolean(errors.message)}
@@ -294,6 +341,73 @@ export default function KontaktPage() {
             </div>
           </motion.form>
         </section>
+
+        <motion.section
+          className="space-y-8 rounded-3xl border border-primary-100 bg-primary-50/60 px-6 py-10 shadow-soft lg:px-12"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.45 }}
+        >
+          <div className="space-y-4 text-center sm:text-left">
+            <p className="text-sm uppercase tracking-[0.3em] text-primary-700">Karriere</p>
+            <h2 className="text-2xl font-semibold text-slate-900 sm:text-3xl">Bewerben bei Curamus</h2>
+            <p className="text-sm text-slate-600 sm:text-base">
+              Wir suchen Menschen, die Gebäude lebenswert halten möchten. Damit Sie schnell wissen, ob wir
+              zueinander passen, haben wir den Bewerbungsweg transparent gestaltet – von der ersten
+              Nachricht bis zum Willkommen im Team.
+            </p>
+          </div>
+
+          <div className="grid gap-6 lg:grid-cols-3">
+            <div className="space-y-3 rounded-2xl bg-white p-6 shadow-sm">
+              <h3 className="text-base font-semibold text-slate-900">So läuft Ihre Bewerbung ab</h3>
+              <ol className="list-decimal space-y-2 pl-6 text-sm text-slate-600">
+                <li>
+                  Kurze Bewerbung an{' '}
+                  <a className="text-primary-700 hover:underline" href="mailto:kontakt@curamus-facility.de">
+                    kontakt@curamus-facility.de
+                  </a>
+                  .
+                </li>
+                <li>Rückmeldung mit Terminvorschlag innerhalb von zwei Werktagen.</li>
+                <li>Kennenlern-Gespräch (online oder vor Ort) und Objektbesichtigung, falls passend.</li>
+                <li>Finale Zu-/Absage inklusive Vertragsangebot.</li>
+              </ol>
+            </div>
+            <div className="space-y-3 rounded-2xl bg-white p-6 shadow-sm">
+              <h3 className="text-base font-semibold text-slate-900">Das hilft uns bei der Prüfung</h3>
+              <ul className="list-disc space-y-2 pl-5 text-sm text-slate-600">
+                <li>Kurzprofil mit relevanter Erfahrung oder Lebenslauf</li>
+                <li>Bevorzugter Einsatzort (Berlin, Brandenburg oder beides)</li>
+                <li>Frühestmöglicher Starttermin und gewünschter Stundenumfang</li>
+                <li>Falls vorhanden: Zertifikate (z. B. Sicherheits- oder Reinigungsschulungen)</li>
+              </ul>
+            </div>
+            <div className="space-y-3 rounded-2xl bg-white p-6 shadow-sm">
+              <h3 className="text-base font-semibold text-slate-900">Noch Fragen?</h3>
+              <p className="text-sm text-slate-600">
+                Unser Recruiting-Team ist telefonisch unter{' '}
+                <a className="text-primary-700 hover:underline" href="tel:+4933772040071">
+                  +49 (0)3377 2040071
+                </a>{' '}
+                erreichbar. Weitere Einblicke, Benefits und offene Rollen finden Sie auch auf unserer
+                <Link className="text-primary-700 hover:underline" href="/karriere">
+                  {' '}
+                  Karriereseite
+                </Link>
+                .
+              </p>
+              <Link
+                href="mailto:kontakt@curamus-facility.de"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary-600 px-4 py-2 text-sm font-medium text-white shadow-soft transition hover:bg-primary-500"
+              >
+                Bewerbungs-E-Mail starten
+                <span aria-hidden="true">→</span>
+              </Link>
+            </div>
+          </div>
+        </motion.section>
       </div>
       <AnimatePresence>
         {status === 'success' && responseMessage && (

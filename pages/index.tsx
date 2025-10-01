@@ -26,18 +26,25 @@ const services = [
     imageAlt: 'Techniker prüft eine digitale Steuerung im Technikraum',
   },
   {
-    title: 'Sicherheitsdienste',
+    title: 'Sicherheitsdienste in Kooperation',
     description:
-      'Objektschutz, Zugangskontrollen und Schließdienste – diskret, zuverlässig und angepasst an Ihren Standort.',
+      'Gemeinsam mit spezialisierten Partnern organisieren wir Objektschutz, Zugangskontrollen und Schließdienste – diskret, zuverlässig und auf Ihren Standort abgestimmt.',
     image: '/images/services/service-security-lobby.png',
-    imageAlt: 'Sicherheitsmitarbeiter überwacht Monitore in einer Bürolobby',
+    imageAlt: 'Sicherheitsmitarbeiter eines Partnerunternehmens überwacht Monitore in einer Bürolobby',
   },
   {
-    title: 'Grünanlagenpflege & Winterdienst',
+    title: 'Grünanlagenpflege',
     description:
-      'Pflege von Außenflächen im Sommer sowie Schneeräumung und Streudienste während der kalten Monate.',
+      'Regelmäßige Pflege von Grünflächen, Sträuchern und Außenbereichen inklusive saisonaler Bepflanzung und Bewässerung.',
+    image: '/images/services/service-gruenpflege.png',
+    imageAlt: 'Gärtnerteam pflegt Grünanlagen vor einem Unternehmensstandort',
+  },
+  {
+    title: 'Winterdienst',
+    description:
+      'Räumen, Streuen und Kontrollfahrten für sichere Wege, Zufahrten und Parkflächen während der kalten Jahreszeit.',
     image: '/images/services/service-outdoor-care.png',
-    imageAlt: 'Team trimmt Sträucher und räumt leichte Schneereste vor einem Bürogebäude',
+    imageAlt: 'Serviceteam räumt leichten Schnee auf einem Unternehmensgelände',
   },
   {
     title: 'Entsorgungsmanagement',
@@ -203,7 +210,7 @@ export default function HomePage() {
             </p>
           </motion.div>
           <motion.div
-            className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+            className="mx-auto flex w-full max-w-[1180px] flex-wrap items-stretch justify-center gap-6 md:gap-8"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: '-60px' }}
@@ -221,7 +228,7 @@ export default function HomePage() {
                   hidden: { opacity: 0, y: 24 },
                   visible: { opacity: 1, y: 0, transition: { duration: 0.45 } },
                 }}
-                className="group relative overflow-hidden rounded-3xl border border-white/20 bg-surface-elevated/80 p-6 shadow-soft transition hover:-translate-y-1 hover:shadow-glow"
+                className="group relative flex w-full flex-col overflow-hidden rounded-3xl border border-white/20 bg-surface-elevated/80 p-6 shadow-soft transition hover:-translate-y-1 hover:shadow-glow md:flex-[1_1_320px] md:max-w-[360px]"
               >
                 <div className="relative mb-4 aspect-[4/3] overflow-hidden rounded-2xl bg-primary-50/40">
                   <Image
@@ -234,8 +241,10 @@ export default function HomePage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-tr from-primary-600/10 via-transparent to-transparent" aria-hidden="true" />
                 </div>
-                <h3 className="text-lg font-semibold text-ink">{service.title}</h3>
-                <p className="mt-3 text-sm text-ink-muted">{service.description}</p>
+                <div className="flex flex-1 flex-col">
+                  <h3 className="text-lg font-semibold text-ink">{service.title}</h3>
+                  <p className="mt-3 text-sm text-ink-muted">{service.description}</p>
+                </div>
               </motion.article>
             ))}
           </motion.div>

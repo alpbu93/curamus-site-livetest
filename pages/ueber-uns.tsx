@@ -103,7 +103,7 @@ export default function UeberUnsPage() {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-600/25 via-transparent to-transparent" aria-hidden="true" />
               </div>
             </div>
-            <div className="relative overflow-hidden rounded-3xl border border-white/20 bg-surface-elevated/80 shadow-soft">
+            <div className="relative mx-auto w-full max-w-3xl overflow-hidden rounded-3xl border border-white/20 bg-surface-elevated/80 shadow-soft">
               <div className="relative aspect-[3/2]">
                 <Image
                   src="/images/about/about-values-team.png"
