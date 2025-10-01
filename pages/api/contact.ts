@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import nodemailer from 'nodemailer'
 
-const fallbackRecipient = 'burak.alp@web.de'
+const fallbackRecipient = 'kontakt@curamus-facility.de'
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 type ContactPayload = {
