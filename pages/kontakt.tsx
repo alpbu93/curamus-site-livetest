@@ -54,7 +54,9 @@ export default function KontaktPage() {
 
   const handleFieldChange = (
     field: keyof FormState,
-  ) => (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  ) => (
+    event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
+  ) => {
     const { value } = event.target
 
     setForm((prev) => ({ ...prev, [field]: value }))
