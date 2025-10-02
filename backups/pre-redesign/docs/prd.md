@@ -2,11 +2,11 @@
 
 # Product Requirements Document (PRD)
 
-**Projekt:** CURAMUS Facility Services GmbH – Homepage
+**Projekt:** CURAMUS facility services GmbH – Homepage
 
 ## 1. Überblick
 
-* **Ziel:** Entwicklung einer modernen, mobiloptimierten Homepage für CURAMUS Facility Services GmbH.
+* **Ziel:** Entwicklung einer modernen, mobiloptimierten Homepage für CURAMUS facility services GmbH.
 * **Quelle:** docs/brief.md
 * **Scope:** Darstellung der Dienstleistungen, Unternehmenswerte und Kontaktmöglichkeiten.
 

@@ -1,13 +1,14 @@
 import Layout from '@/components/Layout'
+import { BRAND_LEGAL, BRAND_SHORT } from '@/lib/brand'
 
 export default function ImpressumPage() {
   return (
     <Layout
-      title="Impressum | Curamus"
-      description="Impressum der Curamus Facility Services GmbH."
+      title={`Impressum | ${BRAND_SHORT}`}
+      description={`Impressum der ${BRAND_LEGAL}.`}
       keywords={[
-        'Impressum Curamus',
-        'Curamus Facility Services GmbH',
+        `Impressum ${BRAND_SHORT}`,
+        BRAND_LEGAL,
         'Rechtliche Angaben Facility Management',
       ]}
     >
@@ -19,14 +20,14 @@ export default function ImpressumPage() {
         </header>
 
         <section className="space-y-3">
-          <h2 className="text-lg font-semibold text-slate-900">CURAMUS Facility Services GmbH</h2>
+          <h2 className="text-lg font-semibold text-slate-900">{BRAND_LEGAL}</h2>
           <p>Angaben gemäß § 5 DDG (ehemals TMG)</p>
         </section>
 
         <section className="space-y-2">
           <h3 className="text-base font-semibold text-slate-900">Geschäftsanschrift</h3>
           <address className="not-italic">
-            <p>CURAMUS Facility Services GmbH</p>
+            <p>{BRAND_LEGAL}</p>
             <p>Saalower Straße 6a</p>
             <p>15806 Zossen</p>
           </address>

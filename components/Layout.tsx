@@ -3,6 +3,7 @@ import type { ReactNode } from 'react'
 import { motion } from 'framer-motion'
 import { Navbar } from './Navbar'
 import { Footer } from './Footer'
+import { BRAND_FULL, BRAND_SHORT } from '@/lib/brand'
 
 interface LayoutProps {
   children: ReactNode
@@ -11,11 +12,12 @@ interface LayoutProps {
   keywords?: string[] | string
 }
 
-const defaultTitle = 'Curamus Facility Management'
+const defaultTitle = `${BRAND_SHORT} Facility Management`
 const defaultDescription =
-  'Wir unterstützen Unternehmen mit intelligentem, nachhaltigem Facility Management in Berlin und Brandenburg.'
+  `${BRAND_SHORT} unterstützt Unternehmen mit intelligentem, nachhaltigem Facility Management in Berlin und Brandenburg.`
 const defaultKeywords = [
-  'Curamus',
+  BRAND_SHORT,
+  BRAND_FULL,
   'Facility Management',
   'Gebäudereinigung',
   'Berlin',
@@ -52,7 +54,7 @@ export function Layout({
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Curamus Facility Services" />
+        <meta property="og:site_name" content={BRAND_FULL} />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />

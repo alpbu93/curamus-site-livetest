@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import Layout from '@/components/Layout'
+import { BRAND_FULL, BRAND_SHORT } from '@/lib/brand'
 
 const strengths = [
   {
@@ -96,11 +97,11 @@ const fade = {
 export default function ReferenzenPage() {
   return (
     <Layout
-      title="Referenzen | Curamus"
-      description="Kundenreferenzen und Kompetenzen von Curamus Facility Services in Berlin und Brandenburg."
+      title={`Referenzen | ${BRAND_SHORT}`}
+      description={`Kundenreferenzen und Kompetenzen von ${BRAND_FULL} in Berlin und Brandenburg.`}
       keywords={[
         'Facility Management Referenzen',
-        'Curamus Erfahrungen',
+        `${BRAND_SHORT} Erfahrungen`,
         'Kunden Facility Services Berlin',
         'Gebäudemanagement Brandenburg',
       ]}

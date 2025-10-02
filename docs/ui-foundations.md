@@ -3,7 +3,7 @@
 _Last updated: 27 September 2025_
 
 ## Strategic Goals
-- Convey a premium, contemporary look for Curamus without sacrificing clarity.
+- Convey a premium, contemporary look for CURAMUS without sacrificing clarity.
 - Improve perceived performance and trust via subtle motion and layering.
 - Keep the classic styling available as a fallback toggle until the refresh is approved.
 

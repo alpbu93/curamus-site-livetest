@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import Layout from '@/components/Layout'
+import { BRAND_FULL, BRAND_LEGAL, BRAND_SHORT } from '@/lib/brand'
 
 const services = [
   {
@@ -67,14 +68,15 @@ const fadeUp = {
 export default function HomePage() {
   return (
     <Layout
-      title="Curamus Facility Management"
+      title={`${BRAND_SHORT} Facility Management`}
       description="Nachhaltige Facility-Services in Berlin & Brandenburg für Unternehmen, die Wert auf Qualität legen."
       keywords={[
         'Facility Management Berlin',
         'Facility Services Brandenburg',
         'Gebäudereinigung',
         'Hausmeisterservice',
-        'Curamus Facility Services',
+        BRAND_FULL,
+        BRAND_SHORT,
       ]}
     >
       <div className="space-y-24">
@@ -89,7 +91,7 @@ export default function HomePage() {
             <div className="flex justify-center lg:justify-start">
               <Image
                 src="/images/curamus-logo.png"
-                alt="Curamus Facility Services Logo"
+                alt={`${BRAND_FULL} Logo`}
                 width={480}
                 height={320}
                 priority
@@ -115,7 +117,7 @@ export default function HomePage() {
               variants={fadeUp}
               custom={1.2}
             >
-              Curamus verbindet moderne Prozesse mit lokaler Nähe. Wir betreuen Ihre Immobilien so,
+              {BRAND_SHORT} verbindet moderne Prozesse mit lokaler Nähe. Wir betreuen Ihre Immobilien so,
               dass Sie Freiräume gewinnen – für Kundentermine, Teams oder neue Projekte.
             </motion.p>
             <motion.div
@@ -150,7 +152,7 @@ export default function HomePage() {
               <div className="relative aspect-[4/3]">
                 <Image
                   src="/images/hero-team-berlin.png"
-                  alt="Curamus Team steht vor einem modernen Bürogebäude in Berlin"
+                  alt={`Team von ${BRAND_FULL} steht vor einem modernen Bürogebäude in Berlin`}
                   fill
                   className="object-cover"
                   sizes="(min-width: 1024px) 420px, 90vw"
@@ -162,7 +164,7 @@ export default function HomePage() {
                 <div className="flex items-center gap-3">
                   <Image
                     src="/images/logo-mark.png"
-                    alt="Curamus Signet"
+                    alt={`${BRAND_SHORT}-Signet`}
                     width={48}
                     height={48}
                     className="h-10 w-10"
@@ -173,7 +175,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="rounded-3xl border border-white/30 bg-surface-elevated/90 p-8 shadow-soft">
-              <h2 className="text-xl font-semibold text-ink">Ihr Vorteil mit Curamus</h2>
+              <h2 className="text-xl font-semibold text-ink">Ihr Vorteil mit {BRAND_SHORT}</h2>
               <p className="mt-4 text-sm text-ink-muted">
                 Schnelle Reaktion, transparente Kommunikation, nachhaltiges Gebäudemanagement. Wir
                 denken Liegenschaften ganzheitlich und bleiben Ihr persönlicher Ansprechpartner.
@@ -285,7 +287,7 @@ export default function HomePage() {
               Regional verwurzelt, zuverlässig an Ihrer Seite
             </h2>
             <p className="text-primary-100">
-              Die CURAMUS Facility Services GmbH steht für Qualität, Transparenz und Kundennähe.
+              Die {BRAND_LEGAL} steht für Qualität, Transparenz und Kundennähe.
               Unser Team bringt Fachwissen und Engagement zusammen, damit Immobilien jeder Art
               gepflegt, sicher und nachhaltig betrieben werden.
             </p>

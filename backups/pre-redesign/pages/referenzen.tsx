@@ -90,11 +90,11 @@ const projects = [
 export default function ReferenzenPage() {
   return (
     <Layout
-      title="Referenzen | Curamus"
-      description="Kundenreferenzen und Kompetenzen von Curamus Facility Services in Berlin und Brandenburg."
+      title="Referenzen | CURAMUS"
+      description="Kundenreferenzen und Kompetenzen von CURAMUS facility services in Berlin und Brandenburg."
       keywords={[
         'Facility Management Referenzen',
-        'Curamus Erfahrungen',
+        'CURAMUS Erfahrungen',
         'Kunden Facility Services Berlin',
         'Gebäudemanagement Brandenburg',
       ]}

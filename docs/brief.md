@@ -1,10 +1,10 @@
 --- filename: docs/brief.md ---
 
-# Projekt-Brief: CURAMUS Facility Services GmbH
+# Projekt-Brief: CURAMUS facility services GmbH
 
 ## Projektziel
 
-Erstellung einer modernen Homepage für die CURAMUS Facility Services GmbH.
+Erstellung einer modernen Homepage für die CURAMUS facility services GmbH.
 Orientierung an [wgs-dienstleistungen.de](https://www.wgs-dienstleistungen.de/), jedoch moderner und mit eigenständigen Inhalten.
 
 ## Rahmenbedingungen
@@ -16,7 +16,7 @@ Orientierung an [wgs-dienstleistungen.de](https://www.wgs-dienstleistungen.de/),
 
 ## Unternehmensinformationen
 
-* Name: CURAMUS Facility Services GmbH
+* Name: CURAMUS facility services GmbH
 * Handelsregisternummer: HRB 40967 P
 * Quelle: [Creditreform Firmeneintrag](https://firmeneintrag.creditreform.de/15806/2013360750/CURAMUS_FACILITY_SERVICES_GMBH)
 

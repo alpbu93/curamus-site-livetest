@@ -9,7 +9,7 @@ export function Footer() {
       <span className="absolute inset-0 bg-white/70" aria-hidden="true" />
       <div className="relative z-10 mx-auto grid max-w-6xl gap-8 px-4 sm:grid-cols-2 lg:grid-cols-4">
         <div className="space-y-3">
-          <p className="text-lg font-semibold text-primary-900">curamus</p>
+          <p className="text-lg font-semibold text-primary-900">CURAMUS</p>
           <p className="text-sm text-slate-600">
             Ganzheitliches Facility Management für Unternehmen in Berlin und Brandenburg.
           </p>
@@ -65,7 +65,7 @@ export function Footer() {
         </div>
       </div>
       <div className="relative z-10 mt-10 border-t border-primary-100 pt-6 text-center text-xs text-slate-400">
-        © {new Date().getFullYear()} Curamus Facility Services GmbH. Alle Rechte vorbehalten.
+        © {new Date().getFullYear()} CURAMUS facility services GmbH. Alle Rechte vorbehalten.
       </div>
     </footer>
   )

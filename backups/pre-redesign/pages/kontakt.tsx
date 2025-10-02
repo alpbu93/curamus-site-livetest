@@ -123,10 +123,10 @@ export default function KontaktPage() {
 
   return (
     <Layout
-      title="Kontakt | Curamus"
-      description="Kontaktieren Sie Curamus Facility Services für ein unverbindliches Beratungsgespräch."
+      title="Kontakt | CURAMUS"
+      description="Kontaktieren Sie CURAMUS facility services für ein unverbindliches Beratungsgespräch."
       keywords={[
-        'Kontakt Curamus',
+        'Kontakt CURAMUS',
         'Facility Management Anfrage',
         'Kontakt Facility Services Berlin',
         'Angebot Gebäudereinigung',
@@ -150,7 +150,7 @@ export default function KontaktPage() {
               <div className="relative aspect-[4/3]">
                 <Image
                   src="/images/contact-support-team.png"
-                  alt="Service-Team von Curamus beantwortet Telefonanfragen"
+                  alt="Service-Team von CURAMUS beantwortet Telefonanfragen"
                   fill
                   className="object-cover"
                   sizes="(min-width: 1024px) 380px, 100vw"

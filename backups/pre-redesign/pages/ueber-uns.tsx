@@ -22,10 +22,10 @@ const values = [
 export default function UeberUnsPage() {
   return (
     <Layout
-      title="Über uns | Curamus"
-      description="Lernen Sie das Team und die Werte von Curamus Facility Services kennen."
+      title="Über uns | CURAMUS"
+      description="Lernen Sie das Team und die Werte von CURAMUS facility services kennen."
       keywords={[
-        'Curamus Team',
+        'CURAMUS Team',
         'Facility Management Unternehmen',
         'Facility Services Berlin',
         'Unternehmen Brandenburg',
@@ -35,10 +35,10 @@ export default function UeberUnsPage() {
         <header className="space-y-4 text-center sm:text-left">
           <p className="text-sm uppercase tracking-[0.3em] text-primary-700">Unternehmen</p>
           <h1 className="text-3xl font-semibold text-slate-900 sm:text-4xl">
-            Über die CURAMUS Facility Services GmbH
+            Über die CURAMUS facility services GmbH
           </h1>
           <p className="text-base text-slate-600">
-            Die CURAMUS Facility Services GmbH ist ein regional verwurzeltes Unternehmen mit Sitz in
+            Die CURAMUS facility services GmbH ist ein regional verwurzeltes Unternehmen mit Sitz in
             Berlin & Brandenburg. Als moderner Dienstleister im Facility Management stehen wir für
             Qualität, Transparenz und Kundennähe.
           </p>
@@ -62,7 +62,7 @@ export default function UeberUnsPage() {
               <div className="relative aspect-[3/2]">
                 <Image
                   src="/images/about/about-team-meeting.png"
-                  alt="Curamus Führungskräfte besprechen Projekte im hellen Loftbüro"
+                  alt="CURAMUS Führungskräfte besprechen Projekte im hellen Loftbüro"
                   width={1200}
                   height={800}
                   className="h-full w-full object-cover"
@@ -88,7 +88,7 @@ export default function UeberUnsPage() {
             <div className="relative aspect-[3/2]">
               <Image
                 src="/images/about/about-values-team.png"
-                alt="Team von Curamus Facility Services steht gemeinsam im Servicekorridor"
+                alt="Team von CURAMUS facility services steht gemeinsam im Servicekorridor"
                 width={1200}
                 height={800}
                 className="h-full w-full object-cover"

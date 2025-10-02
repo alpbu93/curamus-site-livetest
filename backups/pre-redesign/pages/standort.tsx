@@ -5,12 +5,12 @@ import Layout from '@/components/Layout'
 export default function StandortPage() {
   return (
     <Layout
-      title="Standort | Curamus"
-      description="Curamus Facility Services – tätig in Berlin und Brandenburg. Lernen Sie unseren Standort kennen."
+      title="Standort | CURAMUS"
+      description="CURAMUS facility services – tätig in Berlin und Brandenburg. Lernen Sie unseren Standort kennen."
       keywords={[
         'Standort Berlin Brandenburg',
         'Facility Management Region',
-        'Curamus Standort',
+        'CURAMUS Standort',
         'Facility Services Berlin',
       ]}
     >
@@ -73,7 +73,7 @@ export default function StandortPage() {
                   className="h-full w-full border-0"
                   loading="lazy"
                   referrerPolicy="no-referrer"
-                  aria-label="Karte mit dem Einsatzgebiet der Curamus Facility Services"
+                  aria-label="Karte mit dem Einsatzgebiet der CURAMUS facility services"
                 />
               </div>
               <div className="border-t border-primary-100 px-6 py-4 text-xs text-slate-500">

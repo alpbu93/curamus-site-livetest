@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { AnimatePresence, motion } from 'framer-motion'
+import { BRAND_FULL, BRAND_SHORT } from '@/lib/brand'
 
 const navItems = [
   { href: '/', label: 'Startseite' },
@@ -46,17 +47,17 @@ export function Navbar() {
         <Link
           href="/"
           className="flex items-center gap-2 text-xl font-semibold text-primary-900"
-          aria-label="CURAMUS Facility Services Startseite"
+          aria-label={`${BRAND_FULL} Startseite`}
         >
           <Image
             src="/images/logo-mark.png"
-            alt="Stilisiertes C mit Gebäudesilhouette als Curamus-Logomarke"
+            alt="Stilisiertes C mit Gebäudesilhouette als CURAMUS-Logomarke"
             width={120}
             height={36}
             className="h-9 w-auto"
             priority
           />
-          <span className="hidden sm:inline">curamus</span>
+          <span className="hidden sm:inline">{BRAND_SHORT}</span>
         </Link>
         <button
           type="button"

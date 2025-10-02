@@ -1,6 +1,6 @@
 --- filename: docs/backlog.md ---
 
-# Backlog – CURAMUS Facility Services GmbH Homepage
+# Backlog – CURAMUS facility services GmbH Homepage
 
 ## Iteration 1 (MVP) – ✅ abgeschlossen
 

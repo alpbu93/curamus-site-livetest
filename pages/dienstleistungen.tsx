@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import Layout from '@/components/Layout'
+import { BRAND_FULL, BRAND_SHORT } from '@/lib/brand'
 
 const categories = [
   {
@@ -63,8 +64,8 @@ const reveal = {
 export default function DienstleistungenPage() {
   return (
     <Layout
-      title="Dienstleistungen | Curamus"
-      description="Facility-Services von Curamus: Reinigung, Technik, Sicherheitsleistungen in Kooperation, Grünanlagenpflege, Winterdienst und nachhaltige Entsorgung."
+      title={`Dienstleistungen | ${BRAND_SHORT}`}
+      description={`Facility-Services von ${BRAND_FULL}: Reinigung, Technik, Sicherheitsleistungen in Kooperation, Grünanlagenpflege, Winterdienst und nachhaltige Entsorgung.`}
       keywords={[
         'Dienstleistungen Facility Management',
         'Gebäudereinigung Berlin',

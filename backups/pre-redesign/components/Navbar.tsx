@@ -23,17 +23,17 @@ export function Navbar() {
         <Link
           href="/"
           className="flex items-center gap-2 text-xl font-semibold text-primary-900"
-          aria-label="CURAMUS Facility Services Startseite"
+          aria-label="CURAMUS facility services Startseite"
         >
           <Image
             src="/images/logo-mark.png"
-            alt="Stilisiertes C mit Gebäudesilhouette als Curamus-Logomarke"
+            alt="Stilisiertes C mit Gebäudesilhouette als CURAMUS-Logomarke"
             width={120}
             height={36}
             className="h-9 w-auto"
             priority
           />
-          <span className="hidden sm:inline">curamus</span>
+          <span className="hidden sm:inline">CURAMUS</span>
         </Link>
         <button
           type="button"

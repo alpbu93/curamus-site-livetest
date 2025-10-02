@@ -1,6 +1,6 @@
 --- filename: docs/architecture.md ---
 
-# Architektur & Struktur – CURAMUS Facility Services GmbH Homepage
+# Architektur & Struktur – CURAMUS facility services GmbH Homepage
 
 ## Ziel
 

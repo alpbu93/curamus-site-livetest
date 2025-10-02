@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { useTheme } from '@/components/ThemeProvider'
+import { BRAND_LEGAL, BRAND_SHORT } from '@/lib/brand'
 
 export function Footer() {
   const { theme, toggleTheme } = useTheme()
@@ -10,7 +11,7 @@ export function Footer() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.12),transparent_55%)]" aria-hidden="true" />
       <div className="relative z-10 mx-auto grid max-w-6xl gap-8 px-4 sm:grid-cols-2 lg:grid-cols-4 lg:max-w-7xl">
         <div className="space-y-3">
-          <p className="text-lg font-semibold text-white">curamus</p>
+          <p className="text-lg font-semibold text-white">{BRAND_SHORT}</p>
           <p className="text-sm text-white/70">
             Ganzheitliches Facility Management für Unternehmen in Berlin und Brandenburg.
           </p>
@@ -74,7 +75,7 @@ export function Footer() {
         </div>
       </div>
       <div className="relative z-10 mt-10 border-t border-white/10 pt-6 text-center text-xs text-white/60">
-        © {new Date().getFullYear()} Curamus Facility Services GmbH. Alle Rechte vorbehalten.
+        © {new Date().getFullYear()} {BRAND_LEGAL}. Alle Rechte vorbehalten.
         <button
           type="button"
           onClick={toggleTheme}

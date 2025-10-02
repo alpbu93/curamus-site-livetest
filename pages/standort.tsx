@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import dynamic from 'next/dynamic'
 import Layout from '@/components/Layout'
+import { BRAND_FULL, BRAND_SHORT } from '@/lib/brand'
 
 const RegionMap = dynamic(() => import('@/components/RegionMap'), { ssr: false })
 
@@ -14,12 +15,12 @@ const fade = {
 export default function StandortPage() {
   return (
     <Layout
-      title="Standort | Curamus"
-      description="Curamus Facility Services – tätig in Berlin und Brandenburg. Lernen Sie unseren Standort kennen."
+      title={`Standort | ${BRAND_SHORT}`}
+      description={`${BRAND_FULL} – tätig in Berlin und Brandenburg. Lernen Sie unseren Standort kennen.`}
       keywords={[
         'Standort Berlin Brandenburg',
         'Facility Management Region',
-        'Curamus Standort',
+        `${BRAND_SHORT} Standort`,
         'Facility Services Berlin',
       ]}
     >

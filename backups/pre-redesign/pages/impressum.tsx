@@ -3,11 +3,11 @@ import Layout from '@/components/Layout'
 export default function ImpressumPage() {
   return (
     <Layout
-      title="Impressum | Curamus"
-      description="Impressum der Curamus Facility Services GmbH."
+      title="Impressum | CURAMUS"
+      description="Impressum der CURAMUS facility services GmbH."
       keywords={[
-        'Impressum Curamus',
-        'Curamus Facility Services GmbH',
+        'Impressum CURAMUS',
+        'CURAMUS facility services GmbH',
         'Rechtliche Angaben Facility Management',
       ]}
     >
@@ -19,7 +19,7 @@ export default function ImpressumPage() {
 
         <section className="space-y-2">
           <h2 className="text-lg font-semibold text-slate-900">Angaben gemäß § 5 TMG</h2>
-          <p>Curamus Facility Services GmbH</p>
+          <p>CURAMUS facility services GmbH</p>
           <p>Beispielstraße 12</p>
           <p>10115 Berlin</p>
         </section>

@@ -50,8 +50,8 @@ const categories = [
 export default function DienstleistungenPage() {
   return (
     <Layout
-      title="Dienstleistungen | Curamus"
-      description="Facility-Services von Curamus: Reinigung, Technik, Sicherheit, Grünpflege und nachhaltige Entsorgung."
+      title="Dienstleistungen | CURAMUS"
+      description="Facility-Services von CURAMUS: Reinigung, Technik, Sicherheit, Grünpflege und nachhaltige Entsorgung."
       keywords={[
         'Dienstleistungen Facility Management',
         'Gebäudereinigung Berlin',

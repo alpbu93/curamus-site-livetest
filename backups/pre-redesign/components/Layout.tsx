@@ -10,11 +10,11 @@ interface LayoutProps {
   keywords?: string[] | string
 }
 
-const defaultTitle = 'Curamus Facility Management'
+const defaultTitle = 'CURAMUS Facility Management'
 const defaultDescription =
   'Wir unterstützen Unternehmen mit intelligentem, nachhaltigem Facility Management in Berlin und Brandenburg.'
 const defaultKeywords = [
-  'Curamus',
+  'CURAMUS',
   'Facility Management',
   'Gebäudereinigung',
   'Berlin',
@@ -50,7 +50,7 @@ export function Layout({
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Curamus Facility Services" />
+        <meta property="og:site_name" content="CURAMUS facility services" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />

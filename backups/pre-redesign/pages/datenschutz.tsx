@@ -3,10 +3,10 @@ import Layout from '@/components/Layout'
 export default function DatenschutzPage() {
   return (
     <Layout
-      title="Datenschutz | Curamus"
-      description="Datenschutzhinweise der Curamus Facility Services GmbH gemäß DSGVO."
+      title="Datenschutz | CURAMUS"
+      description="Datenschutzhinweise der CURAMUS facility services GmbH gemäß DSGVO."
       keywords={[
-        'Datenschutz Curamus',
+        'Datenschutz CURAMUS',
         'DSGVO Facility Management',
         'Datenschutzhinweise Berlin',
       ]}
@@ -19,7 +19,7 @@ export default function DatenschutzPage() {
 
         <section className="space-y-3">
           <h2 className="text-lg font-semibold text-slate-900">1. Verantwortliche Stelle</h2>
-          <p>Curamus Facility Services GmbH</p>
+          <p>CURAMUS facility services GmbH</p>
           <p>Beispielstraße 12, 10115 Berlin</p>
           <p>E-Mail: datenschutz@curamus-facility.de</p>
         </section>

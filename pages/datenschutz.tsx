@@ -1,12 +1,13 @@
 import Layout from '@/components/Layout'
+import { BRAND_LEGAL, BRAND_SHORT } from '@/lib/brand'
 
 export default function DatenschutzPage() {
   return (
     <Layout
-      title="Datenschutz | Curamus"
-      description="Datenschutzhinweise der Curamus Facility Services GmbH gemäß DSGVO."
+      title={`Datenschutz | ${BRAND_SHORT}`}
+      description={`Datenschutzhinweise der ${BRAND_LEGAL} gemäß DSGVO.`}
       keywords={[
-        'Datenschutz Curamus',
+        `Datenschutz ${BRAND_SHORT}`,
         'DSGVO Facility Management',
         'Datenschutzhinweise Berlin',
       ]}
@@ -21,7 +22,7 @@ export default function DatenschutzPage() {
         <section className="space-y-3">
           <h2 className="text-lg font-semibold text-slate-900">1. Verantwortliche Stelle</h2>
           <address className="not-italic space-y-1">
-            <p>CURAMUS Facility Services GmbH</p>
+            <p>{BRAND_LEGAL}</p>
             <p>Saalower Straße 6a</p>
             <p>15806 Zossen</p>
             <p>Geschäftsführer: Marco Suckel</p>

@@ -1,15 +1,15 @@
 --- filename: docs/content-draft.md ---
 
-# Inhaltsentwürfe CURAMUS Facility Services GmbH
+# Inhaltsentwürfe CURAMUS facility services GmbH
 
 ## Startseite
 
 **Claim/Slogan:** „Zuverlässig. Modern. Nah in Berlin & Brandenburg.“
-Willkommen bei der CURAMUS Facility Services GmbH – Ihrem Partner für professionelle Gebäudedienstleistungen. Wir kümmern uns zuverlässig um Reinigung, Instandhaltung und Sicherheit, damit Sie sich auf Ihr Kerngeschäft konzentrieren können.
+Willkommen bei der CURAMUS facility services GmbH – Ihrem Partner für professionelle Gebäudedienstleistungen. Wir kümmern uns zuverlässig um Reinigung, Instandhaltung und Sicherheit, damit Sie sich auf Ihr Kerngeschäft konzentrieren können.
 
 ## Über uns
 
-Die CURAMUS Facility Services GmbH ist ein regional verwurzeltes Unternehmen mit Sitz in Berlin & Brandenburg. Als moderner Dienstleister im Facility Management stehen wir für Qualität, Transparenz und Kundennähe. Unser Team verbindet Fachwissen mit Engagement und sorgt dafür, dass Immobilien aller Art gepflegt, sicher und nachhaltig betrieben werden.
+Die CURAMUS facility services GmbH ist ein regional verwurzeltes Unternehmen mit Sitz in Berlin & Brandenburg. Als moderner Dienstleister im Facility Management stehen wir für Qualität, Transparenz und Kundennähe. Unser Team verbindet Fachwissen mit Engagement und sorgt dafür, dass Immobilien aller Art gepflegt, sicher und nachhaltig betrieben werden.
 
 ## Dienstleistungen
 

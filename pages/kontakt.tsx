@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import Layout from '@/components/Layout'
+import { BRAND_FULL, BRAND_LEGAL, BRAND_SHORT } from '@/lib/brand'
 
 interface FormState {
   name: string
@@ -134,10 +135,10 @@ export default function KontaktPage() {
 
   return (
     <Layout
-      title="Kontakt | Curamus"
-      description="Kontaktieren Sie Curamus Facility Services für ein unverbindliches Beratungsgespräch."
+      title={`Kontakt | ${BRAND_SHORT}`}
+      description={`Kontaktieren Sie ${BRAND_FULL} für ein unverbindliches Beratungsgespräch.`}
       keywords={[
-        'Kontakt Curamus',
+        `Kontakt ${BRAND_SHORT}`,
         'Facility Management Anfrage',
         'Kontakt Facility Services Berlin',
         'Angebot Gebäudereinigung',
@@ -167,7 +168,7 @@ export default function KontaktPage() {
               <div className="relative aspect-[4/3]">
                 <Image
                   src="/images/contact-support-team.png"
-                  alt="Service-Team von Curamus beantwortet Telefonanfragen"
+                  alt={`Service-Team von ${BRAND_FULL} beantwortet Telefonanfragen`}
                   fill
                   className="object-cover"
                   sizes="(min-width: 1024px) 380px, 100vw"
@@ -211,7 +212,7 @@ export default function KontaktPage() {
             </div>
             <div className="rounded-3xl border border-primary-100 bg-white p-6 shadow-sm">
               <h2 className="text-lg font-semibold text-slate-900">Standort</h2>
-              <p className="mt-3">CURAMUS Facility Services GmbH</p>
+              <p className="mt-3">{BRAND_LEGAL}</p>
               <p>Saalower Straße 6a</p>
               <p>15806 Zossen</p>
               <p className="mt-1">Berlin & Brandenburg</p>
@@ -353,7 +354,7 @@ export default function KontaktPage() {
         >
           <div className="space-y-4 text-center sm:text-left">
             <p className="text-sm uppercase tracking-[0.3em] text-primary-700">Karriere</p>
-            <h2 className="text-2xl font-semibold text-slate-900 sm:text-3xl">Bewerben bei Curamus</h2>
+            <h2 className="text-2xl font-semibold text-slate-900 sm:text-3xl">Bewerben bei {BRAND_SHORT}</h2>
             <p className="text-sm text-slate-600 sm:text-base">
               Wir suchen Menschen, die Gebäude lebenswert halten möchten. Damit Sie schnell wissen, ob wir
               zueinander passen, haben wir den Bewerbungsweg transparent gestaltet – von der ersten

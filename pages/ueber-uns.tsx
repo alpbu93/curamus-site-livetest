@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import Layout from '@/components/Layout'
+import { BRAND_FULL, BRAND_LEGAL, BRAND_SHORT } from '@/lib/brand'
 
 const values = [
   {
@@ -28,10 +29,10 @@ const appear = {
 export default function UeberUnsPage() {
   return (
     <Layout
-      title="Über uns | Curamus"
-      description="Lernen Sie das Team und die Werte von Curamus Facility Services kennen."
+      title={`Über uns | ${BRAND_SHORT}`}
+      description={`Lernen Sie das Team und die Werte von ${BRAND_FULL} kennen.`}
       keywords={[
-        'Curamus Team',
+        `${BRAND_SHORT} Team`,
         'Facility Management Unternehmen',
         'Facility Services Berlin',
         'Unternehmen Brandenburg',
@@ -46,10 +47,10 @@ export default function UeberUnsPage() {
         >
           <p className="text-sm uppercase tracking-[0.3em] text-primary-700">Unternehmen</p>
           <h1 className="text-3xl font-semibold text-ink sm:text-4xl">
-            Über die CURAMUS Facility Services GmbH
+            Über die {BRAND_LEGAL}
           </h1>
           <p className="text-base text-ink-muted">
-            Die CURAMUS Facility Services GmbH ist ein regional verwurzeltes Unternehmen mit Sitz in
+            Die {BRAND_LEGAL} ist ein regional verwurzeltes Unternehmen mit Sitz in
             Berlin & Brandenburg. Als moderner Dienstleister im Facility Management stehen wir für
             Qualität, Transparenz und Kundennähe.
           </p>
@@ -94,7 +95,7 @@ export default function UeberUnsPage() {
               <div className="relative aspect-[3/2]">
                 <Image
                   src="/images/about/about-team-meeting.png"
-                  alt="Curamus Führungskräfte besprechen Projekte im hellen Loftbüro"
+                  alt={`Führungskräfte von ${BRAND_FULL} besprechen Projekte im hellen Loftbüro`}
                   width={1200}
                   height={800}
                   className="h-full w-full object-cover"
@@ -107,7 +108,7 @@ export default function UeberUnsPage() {
               <div className="relative aspect-[3/2]">
                 <Image
                   src="/images/about/about-values-team.png"
-                  alt="Team von Curamus Facility Services steht gemeinsam im Servicekorridor"
+                  alt={`Team von ${BRAND_FULL} steht gemeinsam im Servicekorridor`}
                   width={1200}
                   height={800}
                   className="h-full w-full object-cover"

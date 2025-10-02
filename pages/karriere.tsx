@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import Layout from '@/components/Layout'
+import { BRAND_FULL, BRAND_SHORT } from '@/lib/brand'
 
 const benefits = [
   {
@@ -66,13 +67,13 @@ const applicationSteps = [
 export default function KarrierePage() {
   return (
     <Layout
-      title="Karriere | Curamus"
-      description="Karriere bei Curamus Facility Services: Jobs in Reinigung, Technik, Sicherheit und Winterdienst."
+      title={`Karriere | ${BRAND_SHORT}`}
+      description={`Karriere bei ${BRAND_FULL}: Jobs in Reinigung, Technik, Sicherheit und Winterdienst.`}
       keywords={[
         'Karriere Facility Management',
         'Jobs Gebäudereinigung Berlin',
         'Facility Services Stellenangebote',
-        'Curamus Jobs',
+        `${BRAND_SHORT} Jobs`,
       ]}
     >
       <div className="space-y-20">
@@ -88,7 +89,7 @@ export default function KarrierePage() {
               Deine nächste Aufgabe im Facility Management
             </h1>
             <p className="text-base text-ink-muted">
-              Curamus wächst – und sucht Menschen, die Verantwortung übernehmen wollen. Ob Reinigung,
+              {BRAND_SHORT} wächst – und sucht Menschen, die Verantwortung übernehmen wollen. Ob Reinigung,
               Technik oder koordinierende Rollen: Wir schaffen verlässliche Schichten, faire Bedingungen
               und echte Entwicklungsmöglichkeiten.
             </p>
@@ -111,7 +112,7 @@ export default function KarrierePage() {
             <div className="relative aspect-[4/3]">
               <Image
                 src="/images/hero-team-berlin.png"
-                alt="Curamus Team vor einem Objekt in Berlin"
+                alt={`Team von ${BRAND_FULL} vor einem Objekt in Berlin`}
                 fill
                 className="object-cover"
                 sizes="(min-width: 1024px) 420px, 90vw"

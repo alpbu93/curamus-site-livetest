@@ -50,14 +50,14 @@ const services = [
 export default function HomePage() {
   return (
     <Layout
-      title="Curamus Facility Management"
+      title="CURAMUS Facility Management"
       description="Nachhaltige Facility-Services in Berlin & Brandenburg für Unternehmen, die Wert auf Qualität legen."
       keywords={[
         'Facility Management Berlin',
         'Facility Services Brandenburg',
         'Gebäudereinigung',
         'Hausmeisterservice',
-        'Curamus Facility Services',
+        'CURAMUS facility services',
       ]}
     >
       <div className="space-y-20">
@@ -70,7 +70,7 @@ export default function HomePage() {
               Professionelles Facility Management für Ihr Kerngeschäft
             </h1>
             <p className="text-lg text-slate-600">
-              Willkommen bei der CURAMUS Facility Services GmbH – Ihrem Partner für
+              Willkommen bei der CURAMUS facility services GmbH – Ihrem Partner für
               Gebäudedienstleistungen. Wir kümmern uns zuverlässig um Reinigung, Instandhaltung und
               Sicherheit, damit Sie sich auf Ihr Business konzentrieren können.
             </p>
@@ -94,7 +94,7 @@ export default function HomePage() {
               <div className="relative aspect-[4/3]">
                 <Image
                   src="/images/hero-team-berlin.png"
-                  alt="Curamus Team steht vor einem modernen Bürogebäude in Berlin"
+                  alt="CURAMUS Team steht vor einem modernen Bürogebäude in Berlin"
                   fill
                   className="object-cover"
                   sizes="(min-width: 1024px) 420px, 90vw"
@@ -105,7 +105,7 @@ export default function HomePage() {
                 <div className="flex items-center gap-3">
                   <Image
                     src="/images/logo-mark.png"
-                    alt="Curamus Signet"
+                    alt="CURAMUS Signet"
                     width={48}
                     height={48}
                     className="h-10 w-10"
@@ -197,7 +197,7 @@ export default function HomePage() {
               Regional verwurzelt, zuverlässig an Ihrer Seite
             </h2>
             <p className="text-primary-100">
-              Die CURAMUS Facility Services GmbH steht für Qualität, Transparenz und Kundennähe.
+              Die CURAMUS facility services GmbH steht für Qualität, Transparenz und Kundennähe.
               Unser Team bringt Fachwissen und Engagement zusammen, damit Immobilien jeder Art
               gepflegt, sicher und nachhaltig betrieben werden.
             </p>
