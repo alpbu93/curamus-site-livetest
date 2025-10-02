@@ -29,7 +29,7 @@ const appear = {
 export default function UeberUnsPage() {
   return (
     <Layout
-      title={`Über uns | ${BRAND_SHORT}`}
+      title={`Über uns | ${BRAND_FULL}`}
       description={`Lernen Sie das Team und die Werte von ${BRAND_FULL} kennen.`}
       keywords={[
         `${BRAND_SHORT} Team`,

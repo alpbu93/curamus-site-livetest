@@ -10,11 +10,12 @@ interface LayoutProps {
   keywords?: string[] | string
 }
 
-const defaultTitle = 'CURAMUS Facility Management'
+const defaultTitle = 'CURAMUS facility services'
 const defaultDescription =
-  'Wir unterstützen Unternehmen mit intelligentem, nachhaltigem Facility Management in Berlin und Brandenburg.'
+  'CURAMUS facility services unterstützt Unternehmen mit intelligentem, nachhaltigem Facility Management in Berlin und Brandenburg.'
 const defaultKeywords = [
   'CURAMUS',
+  'CURAMUS facility services',
   'Facility Management',
   'Gebäudereinigung',
   'Berlin',

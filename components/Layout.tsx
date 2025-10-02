@@ -12,9 +12,9 @@ interface LayoutProps {
   keywords?: string[] | string
 }
 
-const defaultTitle = `${BRAND_SHORT} Facility Management`
+const defaultTitle = BRAND_FULL
 const defaultDescription =
-  `${BRAND_SHORT} unterstützt Unternehmen mit intelligentem, nachhaltigem Facility Management in Berlin und Brandenburg.`
+  `${BRAND_FULL} unterstützt Unternehmen mit intelligentem, nachhaltigem Facility Management in Berlin und Brandenburg.`
 const defaultKeywords = [
   BRAND_SHORT,
   BRAND_FULL,

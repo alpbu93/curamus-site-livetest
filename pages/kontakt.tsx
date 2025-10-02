@@ -135,10 +135,11 @@ export default function KontaktPage() {
 
   return (
     <Layout
-      title={`Kontakt | ${BRAND_SHORT}`}
+      title={`Kontakt | ${BRAND_FULL}`}
       description={`Kontaktieren Sie ${BRAND_FULL} für ein unverbindliches Beratungsgespräch.`}
       keywords={[
         `Kontakt ${BRAND_SHORT}`,
+        `Kontakt ${BRAND_FULL}`,
         'Facility Management Anfrage',
         'Kontakt Facility Services Berlin',
         'Angebot Gebäudereinigung',

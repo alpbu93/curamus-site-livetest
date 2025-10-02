@@ -97,7 +97,7 @@ const fade = {
 export default function ReferenzenPage() {
   return (
     <Layout
-      title={`Referenzen | ${BRAND_SHORT}`}
+      title={`Referenzen | ${BRAND_FULL}`}
       description={`Kundenreferenzen und Kompetenzen von ${BRAND_FULL} in Berlin und Brandenburg.`}
       keywords={[
         'Facility Management Referenzen',

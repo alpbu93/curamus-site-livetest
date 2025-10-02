@@ -15,7 +15,7 @@ const fade = {
 export default function StandortPage() {
   return (
     <Layout
-      title={`Standort | ${BRAND_SHORT}`}
+      title={`Standort | ${BRAND_FULL}`}
       description={`${BRAND_FULL} – tätig in Berlin und Brandenburg. Lernen Sie unseren Standort kennen.`}
       keywords={[
         'Standort Berlin Brandenburg',

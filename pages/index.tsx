@@ -68,7 +68,7 @@ const fadeUp = {
 export default function HomePage() {
   return (
     <Layout
-      title={`${BRAND_SHORT} Facility Management`}
+      title={`${BRAND_FULL} – Facility Management`}
       description="Nachhaltige Facility-Services in Berlin & Brandenburg für Unternehmen, die Wert auf Qualität legen."
       keywords={[
         'Facility Management Berlin',

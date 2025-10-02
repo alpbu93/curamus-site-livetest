@@ -64,7 +64,7 @@ const reveal = {
 export default function DienstleistungenPage() {
   return (
     <Layout
-      title={`Dienstleistungen | ${BRAND_SHORT}`}
+      title={`Dienstleistungen | ${BRAND_FULL}`}
       description={`Facility-Services von ${BRAND_FULL}: Reinigung, Technik, Sicherheitsleistungen in Kooperation, Grünanlagenpflege, Winterdienst und nachhaltige Entsorgung.`}
       keywords={[
         'Dienstleistungen Facility Management',

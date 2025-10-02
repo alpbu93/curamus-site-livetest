@@ -67,7 +67,7 @@ const applicationSteps = [
 export default function KarrierePage() {
   return (
     <Layout
-      title={`Karriere | ${BRAND_SHORT}`}
+      title={`Karriere | ${BRAND_FULL}`}
       description={`Karriere bei ${BRAND_FULL}: Jobs in Reinigung, Technik, Sicherheit und Winterdienst.`}
       keywords={[
         'Karriere Facility Management',

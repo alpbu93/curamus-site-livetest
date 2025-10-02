@@ -1,10 +1,10 @@
 import Layout from '@/components/Layout'
-import { BRAND_LEGAL, BRAND_SHORT } from '@/lib/brand'
+import { BRAND_LEGAL, BRAND_FULL, BRAND_SHORT } from '@/lib/brand'
 
 export default function ImpressumPage() {
   return (
     <Layout
-      title={`Impressum | ${BRAND_SHORT}`}
+      title={`Impressum | ${BRAND_FULL}`}
       description={`Impressum der ${BRAND_LEGAL}.`}
       keywords={[
         `Impressum ${BRAND_SHORT}`,

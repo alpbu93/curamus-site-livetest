@@ -50,7 +50,7 @@ const services = [
 export default function HomePage() {
   return (
     <Layout
-      title="CURAMUS Facility Management"
+      title="CURAMUS facility services – Facility Management"
       description="Nachhaltige Facility-Services in Berlin & Brandenburg für Unternehmen, die Wert auf Qualität legen."
       keywords={[
         'Facility Management Berlin',

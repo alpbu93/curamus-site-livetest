@@ -1,10 +1,10 @@
 import Layout from '@/components/Layout'
-import { BRAND_LEGAL, BRAND_SHORT } from '@/lib/brand'
+import { BRAND_LEGAL, BRAND_FULL, BRAND_SHORT } from '@/lib/brand'
 
 export default function DatenschutzPage() {
   return (
     <Layout
-      title={`Datenschutz | ${BRAND_SHORT}`}
+      title={`Datenschutz | ${BRAND_FULL}`}
       description={`Datenschutzhinweise der ${BRAND_LEGAL} gemäß DSGVO.`}
       keywords={[
         `Datenschutz ${BRAND_SHORT}`,
